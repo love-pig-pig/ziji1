@@ -9,7 +9,7 @@ name: 步步宝
 on:
   workflow_dispatch:
   schedule:
-     - cron: '1 0-12/2 * * *'
+     - cron: '1 0-16/1 * * *'
   watch:
     types: started
     
