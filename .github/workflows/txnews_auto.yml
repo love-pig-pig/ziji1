@@ -5,7 +5,7 @@ name: 腾讯新闻自动阅读
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/15 */3 * * *'
+     - cron: '*/15 * * * *'
   watch:
     types: started
 jobs:
