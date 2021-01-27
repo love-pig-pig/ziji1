@@ -56,7 +56,7 @@ http-request https:\/\/veishop\.iboxpay\.com\/* script-path=https://raw.githubus
 const $ = Env("笑谱");
 $.idx = ($.idx = ($.getval('iboxpaySuffix') || '1') - 1) > 0 ? ($.idx + 1 + '') : ''; // 账号扩展字符
 const notify = $.isNode() ? require("./sendNotify") : ``;
-const COOKIE = $.isNode() ? require("./iboxpayCOOKIE") : `{"Content-Type":"application/json; charset=utf-8","X-User-Agent":"VeiShop, 1.4.4 (iOS, 13.7, zh_CN, Apple, iPhone, 9BFBF900-5890-4A6F-8D94-E9EA628EC3D1)","Accept":"*/*","version":"1.4.4","shopkeeperId":"1148855820752977920","source":"VEISHOP_APP_IOS","Host":"veishop.iboxpay.com","Accept-Language":"zh-Hans-CN;q=1","token":"6480b56e31aa41ff8ee6137da140e55e","Accept-Encoding":"gzip, deflate, br","traceid":"3135077695733883699216117640543862bfa26fca4b8","User-Agent":"VeiShop, 1.4.4 (iOS, 13.7, zh_CN, Apple, iPhone, 9BFBF900-5890-4A6F-8D94-E9EA628EC3D1)","Connection":"keep-alive","mchtNo":"100529600058887"}`;
+const COOKIE = $.isNode() ? require("./iboxpayCOOKIE") : ``;
 const logs = 0; // 0为关闭日志，1为开启
 const notifyttt = 1// 0为关闭外部推送，1为12 23 点外部推送
 const notifyInterval = 2;// 0为关闭通知，1为所有通知，2为12 23 点通知  ， 3为 6 12 18 23 点通知 
