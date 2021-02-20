@@ -4,7 +4,7 @@
 #   branches: 
 #   - master 
 
-name:东极速现金
+name: 东极速现金
 
 on:
   workflow_dispatch:
