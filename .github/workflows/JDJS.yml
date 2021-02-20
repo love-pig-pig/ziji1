@@ -4,7 +4,7 @@
 #   branches: 
 #   - master 
 
-name: 京东极速现金
+name:东极速现金
 
 on:
   workflow_dispatch:
@@ -28,7 +28,7 @@ jobs:
           npm install
       - name: '运行 【极速现金】'
         run: |
-          node Task/jd_speed_sign.js
+          node Task/speed.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
