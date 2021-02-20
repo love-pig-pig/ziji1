@@ -27,7 +27,7 @@ const $ = new Env('京东极速版');
 
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
-const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
+const jdCookieNode = $.isNode() ? require('./jdCookie.js') : 'pt_key=AAJgEcG6ADAe_z9tFU3Wwafe8bJi3JM5PkWyXdMcsXN2qJY9erg7sae2e91j7iQy--3jaiyx-io;pt_pin=jd_6e1ca97c6bf43;';
 
 
 let cookiesArr = [], cookie = '', message;
@@ -371,7 +371,7 @@ async function startItem(activeId, activeType) {
       } catch (e) {
         $.logErr(e, resp)
       } finally {
-        resolve(data);
+        resolve(data);l
       }
     })
   })
