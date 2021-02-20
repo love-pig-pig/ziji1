@@ -4,12 +4,12 @@
 #   branches: 
 #   - master 
 
-name: 腾讯新闻
+name: 京东极速现金
 
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/3 * * * *'
+     - cron: '3 0 * * *'
   watch:
     types: started
     
@@ -26,13 +26,11 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【腾讯新闻】'
+      - name: '运行 【极速现金】'
         run: |
-          node Task/txnews.js
+          node Task/jd_speed_sign.js
         env:
-          TXNEWS_SIGN: ${{ secrets.TXNEWS_SIGN }}
-          TXNEWS_COOKIE: ${{ secrets.TXNEWS_COOKIE }}
-          TXNEWS_VIDEO: ${{ secrets.TXNEWS_VIDEO }}
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TXNEWS_NOTIFY_CONTROL: ${{ secrets.TXNEWS_NOTIFY_CONTROL }}
