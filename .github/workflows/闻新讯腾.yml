@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/ai1983/ziji.git ~/ziji
+          git clone https://github.com/love-pig-pig/ziji1.git ~/ziji1
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -24,12 +24,12 @@ jobs:
       - name: npm install
         if: env. TXNEWS_COOKIE
         run: |
-          cd ~/ziji
+          cd ~/ziji1
           npm install
       - name: '运行 【闻新讯腾】'
         if: env. TXNEWS_COOKIE
         run: |
-          cd ~/ziji
+          cd ~/ziji1
           node Task/txnews.js
         env:
           TXNEWS_SIGN: ${{ secrets.TXNEWS_SIGN }}
