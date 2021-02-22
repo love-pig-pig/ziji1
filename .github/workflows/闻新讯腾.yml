@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone ttps://github.com/ai1983/ziji.git ~/ziji
+          git clone https://github.com/ai1983/ziji.git ~/ziji
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
