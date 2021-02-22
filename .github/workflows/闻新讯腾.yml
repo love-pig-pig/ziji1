@@ -13,10 +13,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
+    env:
+          TXNEWS_SIGN: ${{ secrets.TXNEWS_SIGN }}
+          TXNEWS_COOKIE: ${{ secrets.TXNEWS_COOKIE }}
+          TXNEWS_VIDEO: ${{ secrets.TXNEWS_VIDEO }}
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/love-pig-pig/ziji1.git ~/ziji1
+          git clone ttps://github.com/ai1983/ziji.git ~/ziji
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -24,18 +28,14 @@ jobs:
       - name: npm install
         if: env.TXNEWS_SIGN
         run: |
-          cd ~/ziji1
+          cd ~/ziji
           npm install
       - name: '运行 【闻新讯腾】'
-        if: env.TXNEWS_COOKIE
+        if: env.TXNEWS_SIGN
         run: |
-          cd ~/ziji1
+          cd ~/ziji
           node Task/txnews.js
         env:
-          TXNEWS_SIGN: ${{ secrets.TXNEWS_SIGN }}
-          TXNEWS_COOKIE: ${{ secrets.TXNEWS_COOKIE }}
-          TXNEWS_VIDEO: ${{ secrets.TXNEWS_VIDEO }}
-          TXNEWS_NOTIFY_CONTROL: ${{ secrets.TXNEWS_NOTIFY_CONTROL }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_USER_ID: ${{ secrets.TG_USER_ID }}
 
