@@ -2,7 +2,7 @@ name: 宝步步（安卓）
 on:
   workflow_dispatch:
   schedule:
-     - cron: '0 0-6/2 * * *'
+     - cron: '0 0-6/3 * * *'
   watch:
     types: started
 jobs:
