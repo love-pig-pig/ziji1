@@ -24,19 +24,19 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/Sunert/Scripts.git ~/Scripts
+          git clone https://github.com/ai1983/ziji.git ~/ziji
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
       - name: npm install
         run: |
-          cd ~/Scripts
+          cd ~/ziji
           npm install
       - name: '运行 【腾讯新闻】'
         if: env.TXNEWS_COOKIE
         run: |
-          cd ~/Scripts
+          cd ~/ziji
           node Task/txnews.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
