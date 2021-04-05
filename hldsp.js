@@ -58,6 +58,9 @@ let hldspurl = 'https://vip.75787.com/app/index.php?i=3&t=0&v=1.1.47&from=wxapp&
 //let hldsphd = $.getdata('hldsphd')
 let hldsphd = '{"Accept":"*/*","Content-Type":"application/x-www-form-urlencoded","Connection":"keep-alive","Host":"vip.75787.com","User-Agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 13_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.2(0x18000234) NetType/WIFI Language/zh_CN","Referer":"https://servicewechat.com/wx13d6a23c765501eb/20/page-frame.html","Accept-Encoding":"gzip, deflate, br","Accept-Language":"zh-cn"}'
 let hlsign = '',hluid = ''
+hldsphdArr.push('{"Accept":"*/*","Content-Type":"application/x-www-form-urlencoded","Connection":"keep-alive","Host":"vip.75787.com","User-Agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 13_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.2(0x18000234) NetType/WIFI Language/zh_CN","Referer":"https://servicewechat.com/wx13d6a23c765501eb/20/page-frame.html","Accept-Encoding":"gzip, deflate, br","Accept-Language":"zh-cn"}')
+hldspurlArr.push(`https://vip.75787.com/app/index.php?i=3&t=0&v=1.1.47&from=wxapp&c=entry&a=wxapp&do=Vgetuserinfo&m=luobo_video&sign=9db09742406c22c1fb0eebb6adec9ffd&uid=ogDfJ5XSx2afxfjAJZe5z0DdoH_s`)
+
 !(async () => {
   if (typeof $request !== "undefined") {
     await hldspck()
