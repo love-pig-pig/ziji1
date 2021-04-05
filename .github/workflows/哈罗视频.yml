@@ -6,7 +6,7 @@ name: 哈罗视频
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0,30 0-15 * * *'
+    - cron: '0,30 0-14 * * *'
   watch:
     types: started
 
