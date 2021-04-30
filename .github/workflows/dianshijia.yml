@@ -1,5 +1,5 @@
 
-name: 电视家
+name: 电视家失效
 
 on:
   workflow_dispatch:
