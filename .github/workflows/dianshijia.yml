@@ -15,21 +15,17 @@ jobs:
         DSJ_HEADERS: ${{ secrets.DSJ_HEADERS }}
         DSJ_DRAWAL: ${{ secrets.DSJ_DRAWAL }}
         TZ: Asia/shanghai
-    steps:
-      - name: Checkout
-        
+    steps: 
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
       - name: npm install
         run: |
-          
           npm install
       - name: '运行 【电视家】'
         if: env.DSJ_HEADERS
         run: |
-          
           node dianshijia.js
         env:
           DSJ_NOTIFY_CONTROL: ${{ secrets.DSJ_NOTIFY_CONTROL }}
